@@ -1,6 +1,7 @@
 import { matchIcu } from './icu';
 import { matchI18Next } from './i18next';
 import { matchSprintf } from './sprintf';
+import { matchI18NextBrackets } from './i18next-brackets';
 
 export const xmlStyleReplacer = (index: number) =>
   `<span translate="no">${index}</span>`;
@@ -17,6 +18,7 @@ export const matcherMap: {
   none: matchNothing,
   icu: matchIcu,
   i18next: matchI18Next,
+  'i18next-brackets': matchI18NextBrackets,
   sprintf: matchSprintf,
 };
 
